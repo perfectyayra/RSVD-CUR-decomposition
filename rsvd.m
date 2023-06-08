@@ -4,7 +4,7 @@ function [Z,W,U,V,SA,SB,SC,flag] = rsvd(A,B,C)
 % function [X,Y,U,V,SA,SB,SC,flag] = rsvd(A,B,C)
 
 
-% This code is an implementation of the  so-called {\em regular} matrix triplet $(A, B, C)$,
+% This code is an implementation of the  so-called "regular" matrix triplet $(A, B, C)$,
 % i.e., $B$ is of full row rank and $C$ is of full column rank
 
 
