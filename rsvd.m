@@ -40,7 +40,7 @@ if norm(B - Z*SB*U', 'fro') > 1e-8, flag = 2; end
 if norm(C - V*SC*W', 'fro') > 1e-8, flag = 3; end
 
 
-return
+
 
 
 
