@@ -4,8 +4,8 @@ m=100000;
 k=50;
 C=ones(m) + diag(4*diag(ones(m)));
 C1=toeplitz(0.99.^(0:n-1));
-R=chol(C);
-R1=chol(C1);
+B=chol(C);
+G=chol(C1);
 A_exact=zeros(m,n);
 
 for i=1:10
@@ -30,10 +30,10 @@ nTw_hat=zeros(5,k);
 
 
 for j=1:5
-    Correlated_noise= R*randn(m,n)*R1 ;
+    Correlated_noise= B*randn(m,n)*G ;
     E=0.1*(norm(A_exact)/norm(Correlated_noise))*Correlated_noise;
     A=A_exact+E;
-    [Z,W,U1,V1,SA,SB,SC] = rsvd0(A,R,R1);
+    [Z,W,U1,V1,SA,SB,SC] = rsvd0(A,B,G);
     [Qz,Tz]=qr(Z);
     [Qw,Tw]=qr(W);
     
