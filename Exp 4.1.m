@@ -1,6 +1,9 @@
+% This code reproduces the results for noise level epsilon=0.1, change this value to 0.2 or 0.15 to get other plots
+
 n=100000;
 m=1000;
 k=50;
+epsilon=0.1;
 C=ones(m) + diag(4*diag(ones(m))); %compound symmetry covariance structure 
 C1=toeplitz(0.99.^(0:n-1));  %auto regressive of order 1 covariance structure
 B=chol(C);
@@ -22,7 +25,7 @@ end
 
 for j=1:10
     ee= B*randn(m,n)*G ; %correlated noise 
-    E=0.1*(norm(A_exact)/norm(ee))*ee;
+    E=epsilon*(norm(A_exact)/norm(ee))*ee;
     A=A_exact+E;
     [U,S,V]=svd(A,0); %matlab implementation
     [Z,W,U1,V1,SA,SB,SC] = rsvd(A,B,G); %our implementation 
