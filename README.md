@@ -6,7 +6,7 @@ The experiment files, named Exp 4.1.m, Exp 4.2.m, and so on, correspond to the e
 
 Here is a brief description of the files included in the repository:
 
-rsrsvd.m: This file implements Algorithm 2.1, which is discussed in detail in the paper. It contains the code necessary to perform a restricted singular value decomposition (RSVD) of matrices.
+rsvd.m: This file implements Algorithm 2.1, which is discussed in detail in the paper. It contains the code necessary to perform a restricted singular value decomposition (RSVD) of matrices.
 
 deim.m: This file contains the implementation of Algorithm 3.1, an essential component of the overall algorithm. Algorithm 3.1 describes the discrete empirical interpolation method (DEIM) utilized in the process.
 
