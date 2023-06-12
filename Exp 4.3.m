@@ -1,4 +1,3 @@
-addpath(genpath('C:\Users\20190195\OneDrive - TU Eindhoven\Matlab'))
 load('mfeat-fou');
 load('mfeat-kar');
 load('mfeat-pix');
