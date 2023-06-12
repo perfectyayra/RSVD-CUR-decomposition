@@ -2,6 +2,11 @@
 
 The code rsvd_cur_deim.m is a matlab implementation of a RSVD-CUR decomposition algorithm based on discrete empirical interpolation method. For more information about how this algorithm works please see https://arxiv.org/abs/2204.02113
 
+The various Exp files are named according to the experiment numbers in the paper. All necessary functions to reproduced the experiments are made available.
+the rsvd.m, deim.m, qdeim.m, smin.m 
+
 ## Data sets
-mfeat-fou, mfeat-kar, and mfeat-pix are the data sets used in Exp 4.3 
-ann-train.data and ann-test.data are the data sets used in Exp 4.4
+mfeat-fou, mfeat-kar, and mfeat-pix are the data sets used in Exp 4.3.
+
+
+ann-train.data and ann-test.data are the data sets used in Exp 4.4.
