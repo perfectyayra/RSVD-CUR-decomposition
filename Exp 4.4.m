@@ -1,3 +1,5 @@
+% This code reproduces the results for noise level epsilon=0.001, change this value to 0.0001 the other result
+epsilon=0.001;
 for j=1:10
     traindata=load("ann-train.data");
     testdata=load("ann-test.data");
@@ -11,7 +13,7 @@ for j=1:10
     E=B*randn(m,n);
 
     %perturb train data with noise
-    A_E=A_train+0.001*(norm(A_train)/norm(E))*E;
+    A_E=A_train+epsilon*(norm(A_train)/norm(E))*E;
 
     %cost of variables matrix
     G=diag([ones(16,1);22.78;11.41;14.51;11.41]);
@@ -74,7 +76,7 @@ for j=1:10
     GCUR_Var_cost(j)=sum(g(p2));
 
 end
-
+% Error rate 
 mean(AllVar_acc)
 mean(RSVD_ID_Var_acc)
 mean(ID_Var_acc)
@@ -82,7 +84,7 @@ mean(GCUR_Var_acc)
 
 
 
-
+% Cost of variables 
 mean(AllVar_cost)
 mean(RSVD_ID_Var_cost)
 mean(ID_Var_cost)
