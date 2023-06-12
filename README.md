@@ -18,4 +18,4 @@ smin.m: This function is utilized within the code to reproduce Figure 4.2 in the
 
 Additionally, the code utilizes specific data sets for conducting experiments. The mfeat-fou, mfeat-kar, and mfeat-pix data sets are used in Experiment 4.3. On the other hand, the ann-train.data and ann-test.data data sets are used in Experiment 4.4.
 
-By utilizing these files, functions, and data sets, it is possible to reproduce the experiments and results presented in the paper.
+By utilizing these code files, functions, and provided data sets, it is possible to replicate the experiments and obtain the results presented in the paper. These resources serve as a valuable tool for understanding and applying the restricted SVD-based CUR decomposition technique to matrix triplets.
