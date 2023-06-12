@@ -1,6 +1,6 @@
 # A restricted SVD based CUR decomposition for matrix triplets
 
-## Perfect Y. Gidisu and Michiel E. Hochstenbach
+### Authors: Perfect Y. Gidisu and Michiel E. Hochstenbach
 
 The MATLAB code provided in the various files implements the algorithms described in the paper titled "A restricted SVD based CUR decomposition for matrix triplets." For a comprehensive understanding of these algorithms, we recommend referring to the paper available at https://arxiv.org/abs/2204.02113.
 
