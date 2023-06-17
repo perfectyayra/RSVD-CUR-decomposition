@@ -36,14 +36,14 @@ for j=1:10
 
     k=10;
 
-    p = cur_deim(W(:,1:k),k); % RSVD_ID slected column indices
+    p = deim(W(:,1:k),k); % RSVD_ID slected column indices
     RSVD_ID_Ca=A_E(:,p);
 
 
-    p1 = cur_deim(V(:,1:k),k); % ID selected column indices
+    p1 = deim(V(:,1:k),k); % ID selected column indices
     ID_Ca=A_E(:,p1);
     
-    p2 = cur_deim(X2(:,1:k),k); %GCUR selected column indices
+    p2 = deim(X2(:,1:k),k); %GCUR selected column indices
     GCUR_Ca=A_E(:,p2);
     
    % train models 
