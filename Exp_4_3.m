@@ -159,7 +159,8 @@ for i=1:20
 
 
 end
-rank_k={'20';'30'};
+Data=['B=pix vs. G=fou';'B=pix vs. G=fou'];
+rank_k=[20;30];
 ID_view1=(mean(ID_v1))';
 ID_view2=(mean(ID_v2))';
 RSVD_ID_view1=(mean(RSVD_ID_v1))';
@@ -167,15 +168,15 @@ RSVD_ID_view2=(mean(RSVD_ID_v2))';
 
 
 
-tabel1=table(ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2,'RowNames',rank_k)
+pix_fou_sing_view=table(Data,rank_k,ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2);
 
 
 Fused_RSVD_ID=(mean(FUSED_RSVD_ID))';
 Fused_ID=(mean(FUSED_ID))';
 Concat_ID=(mean(Concat_ID))';
-table2=table(Fused_ID,Concat_ID,Fused_RSVD_ID,'RowNames',rank_k)
+pix_fou_fused_view=table(Data,rank_k,Fused_ID,Concat_ID,Fused_RSVD_ID);
  
-clearvars -except fou kar pix labels
+clearvars -except fou kar pix labels rank_k pix_fou_sing_view pix_fou_fused_view
 
 %% second case fou and kar
 for i=1:20
@@ -323,7 +324,7 @@ for i=1:20
 
 
 end
-rank_k={'20';'30'};
+Data=['B=fou vs. G=kar';'B=fou vs. G=kar'];
 ID_view1=(mean(ID_v1))';
 ID_view2=(mean(ID_v2))';
 RSVD_ID_view1=(mean(RSVD_ID_v1))';
@@ -331,15 +332,15 @@ RSVD_ID_view2=(mean(RSVD_ID_v2))';
 
 
 
-tabel1=table(ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2,'RowNames',rank_k)
+fou_kar_sing_view=table(Data,rank_k,ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2);
 
 
 Fused_RSVD_ID=(mean(FUSED_RSVD_ID))';
 Fused_ID=(mean(FUSED_ID))';
 Concat_ID=(mean(Concat_ID))';
-table2=table(Fused_ID,Concat_ID,Fused_RSVD_ID,'RowNames',rank_k)
+fou_kar_fused_view=table(Data,rank_k,Fused_ID,Concat_ID,Fused_RSVD_ID);
 
-clearvars -except fou kar pix labels 
+clearvars -except fou kar pix labels rank_k pix_fou_sing_view pix_fou_fused_view fou_kar_sing_view fou_kar_fused_view
 
 %% third case pix and kar
 for i=1:20
@@ -487,7 +488,7 @@ for i=1:20
 
 
 end
-rank_k={'20';'30'};
+Data=['B=pix vs. G=kar';'B=pix vs. G=kar'];
 ID_view1=(mean(ID_v1))';
 ID_view2=(mean(ID_v2))';
 RSVD_ID_view1=(mean(RSVD_ID_v1))';
@@ -495,14 +496,18 @@ RSVD_ID_view2=(mean(RSVD_ID_v2))';
 
 
 
-tabel1=table(ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2,'RowNames',rank_k)
+pix_kar_sing_view=table(Data,rank_k,ID_view1,RSVD_ID_view1,ID_view2,RSVD_ID_view2);
 
 
 Fused_RSVD_ID=(mean(FUSED_RSVD_ID))';
 Fused_ID=(mean(FUSED_ID))';
 Concat_ID=(mean(Concat_ID))';
-table2=table(Fused_ID,Concat_ID,Fused_RSVD_ID,'RowNames',rank_k)
+pix_kar_fused_view=table(Data,rank_k,Fused_ID,Concat_ID,Fused_RSVD_ID);
  
  
+Table3=outerjoin(pix_fou_sing_view,fou_kar_sing_view,'MergeKeys',true);
+Table3=outerjoin(Table3,pix_kar_sing_view,'MergeKeys',true)
 
+Table4=outerjoin(pix_fou_fused_view,fou_kar_fused_view,'MergeKeys',true);
+Table4=outerjoin(Table4,pix_kar_fused_view,'MergeKeys',true)
  
