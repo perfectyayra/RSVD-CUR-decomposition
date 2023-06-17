@@ -1,9 +1,8 @@
 function icol = deim(V,k)
 
 icol=zeros(1,k);
-for j = 1:k
-  [~, icol(j)] = max(abs(V(:,j)));
-  if j<k
-   V(:,j+1) = V(:,j+1) - V(:,1:j) * (V(icol(1:j),1:j) \ V(icol(1:j),j+1));
-  end
+[~, icol(1)] = max(abs(V(:,1)));
+for j = 2:k
+   V(:,j) = V(:,j) - V(:,1:j-1) * (V(icol(1:j-1),1:j-1) \ V(icol(1:j-1),j+1));
+   [~, icol(j)] = max(abs(V(:,j)));
 end
