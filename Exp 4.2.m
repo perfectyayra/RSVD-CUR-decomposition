@@ -1,6 +1,6 @@
 % This code reproduces the results for noise level epsilon=0.1, change this value to 0.2 to get other plot
-n=100000;
-m=1000;
+m=100000;
+n=1000;
 k=50;
 espilon=0.1;
 C=ones(m) + diag(4*diag(ones(m))); %compound symmetry covariance structure 
@@ -12,7 +12,7 @@ G=chol(C1);
 B_E=B;
 for i=1:m
     for j=i+1:m
-        B_E(i,j) = R_E(i,j) * (1 + 2*0.1*(rand-0.5));
+        B_E(i,j) = B_E(i,j) * (1 + 2*0.1*(rand-0.5));
     end
 end
 
