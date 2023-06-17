@@ -2,7 +2,7 @@
 m=10000;
 n=1000;
 k=50;
-espilon=0.1;
+epsilon=0.1;
 C=ones(m) + diag(4*diag(ones(m))); %compound symmetry covariance structure 
 C1=toeplitz(0.99.^(0:n-1));  %auto regressive of order 1 covariance structure
 B=chol(C);
