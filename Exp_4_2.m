@@ -1,5 +1,5 @@
 % This code reproduces the results for noise level epsilon=0.1, change this value to 0.2 to get other plot
-m=100000;
+m=10000;
 n=1000;
 k=50;
 espilon=0.1;
