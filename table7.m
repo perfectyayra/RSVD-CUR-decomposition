@@ -3,7 +3,7 @@
 % rows)
 m = 1000; n = 100; l = m; d = n; 
 s=[10,20,30];
-for j=1:100    
+for j=1:100
     y = randn(m,1); z=randn(d,1);
     b = [y; z]; 
 
