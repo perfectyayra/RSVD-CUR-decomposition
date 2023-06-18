@@ -1,4 +1,3 @@
-rng(0)
 n=1000;
 m=10000;
 k=50;
@@ -71,15 +70,15 @@ end
 
 
 
-semilogy(1:50,mean(neta_s),'-o');
+semilogy(1:50,mean(neta_s),'-r');
 hold on;
-semilogy(1:50,mean(neta_p),'->');
-semilogy(1:50,mean(nTz_hat),'-v'); 
-semilogy(1:50,mean(nTw_hat),'-p'); 
-semilogy(1:50,mean(nerr),'-*');  
-semilogy(1:50,mean(nerr2),'-s');  
-semilogy(1:50,repmat(mean(ee),1,50),'-d');  
-axisx([1 50])
+semilogy(1:50,mean(neta_p),'--r');
+semilogy(1:50,mean(nTz_hat),'-g'); 
+semilogy(1:50,mean(nTw_hat),'--g'); 
+semilogy(1:50,mean(nerr),'-b*');  
+semilogy(1:50,mean(nerr2),'--b');  
+semilogy(1:50,repmat(mean(ee),1,50),'-k');  
+
 
 legend('$\eta_s$','$\eta_p$','$\widehat T_Z$','$\widehat T_W$',...
    'RSVD-CUR-error', 'RSVD-CUR-bound', 'Norm-$A_E$','interpreter', 'latex')
