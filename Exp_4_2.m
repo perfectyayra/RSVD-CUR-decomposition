@@ -78,8 +78,8 @@ for j=1:10
         %% errors
         CUR_err(j,i)=norm(A_exact-CUR)/norm(A_exact);
         CUR1_err(j,i)=norm(A_exact-CUR1)/norm(A_exact);
-        RCUR_err1(j,i)=norm(A_exact-RCUR)/norm(A_exact);
-        RCUR1_err1(j,i)=norm(A_exact-RCUR1)/norm(A_exact);
+        RCUR_err(j,i)=norm(A_exact-RCUR)/norm(A_exact);
+        RCUR1_err(j,i)=norm(A_exact-RCUR1)/norm(A_exact);
         SVD_err(j,i)=norm(A_exact-A_svd)/norm(A_exact);
         RSVD_err(j,i)=norm(A_exact-A_rsvd)/norm(A_exact);
 
@@ -95,12 +95,12 @@ err3=mean(RSVD_err);
 
 
 
-plot(4:2:k,nonzeros(err),'-o');
+plot(1:k,nonzeros(err),'-o');
 hold on;
-plot(4:2:k,nonzeros(err1),'-*'); 
-plot(4:2:k,nonzeros(err11),'-s'); 
-plot(4:2:k,nonzeros(err12),'-p'); 
-plot(4:2:k,nonzeros(err2),'-d');  
-plot(4:2:k,nonzeros(err3),'-+');  
+plot(1:k,nonzeros(err1),'-*'); 
+plot(1:k,nonzeros(err11),'-s'); 
+plot(1:k,nonzeros(err12),'-p'); 
+plot(1:k,nonzeros(err2),'-d');  
+plot(1:k,nonzeros(err3),'-+');  
 
 legend('DEIM-CUR','QDEIM-CUR','DEIM-RSVD-CUR','QDEIM-RSVD-CUR','SVD','RSVD')
