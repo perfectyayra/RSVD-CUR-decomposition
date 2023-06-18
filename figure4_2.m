@@ -33,7 +33,7 @@ for j=1:5
     Correlated_noise= B*randn(m,n)*G ;
     E=0.1*(norm(A_exact)/norm(Correlated_noise))*Correlated_noise;
     A=A_exact+E;
-    [Z,W,U1,V1,SA,SB,SC] = rsvd0(A,B,G);
+    [Z,W,U1,V1,SA,SB,SC] = rsvd(A,B,G);
     [Qz,Tz]=qr(Z);
     [Qw,Tw]=qr(W);
     
