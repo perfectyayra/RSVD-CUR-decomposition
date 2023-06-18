@@ -1,6 +1,6 @@
 rng(0)
 n=1000;
-m=100000;
+m=10000;
 k=50;
 C=ones(m) + diag(4*diag(ones(m)));
 C1=toeplitz(0.99.^(0:n-1));
