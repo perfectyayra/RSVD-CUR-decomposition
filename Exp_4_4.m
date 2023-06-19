@@ -31,7 +31,7 @@ for j=1:10
     [U,S,V]=svd(A_E,0);
     [~,~,X2,~,~]=gsvd(A_E,G,0);
     X2=fliplr(X2);
-    [~,W,~,~,~,~,~] = rsvd(A_E,B',G);
+    [~,W,~,~,~,~,~] = rsvd(A_E,B,G);
 
 
     k=10;
