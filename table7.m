@@ -35,7 +35,7 @@ for j=1:100
 
     for i=1:length(s)
         k=s(i);         
-        [Z,W,U,V,SA,SB,SC] = rsvd(A,B,G);
+        [~,W,~,~,~,~,~] = rsvd(A,B,G);
         
         p = deim(W(:,1:k),k);       
        
