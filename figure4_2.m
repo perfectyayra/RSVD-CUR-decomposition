@@ -33,8 +33,8 @@ for j=1:5
     E=0.1*(norm(A_exact)/norm(Correlated_noise))*Correlated_noise;
     A=A_exact+E;
     [Z,W,U1,V1,SA,SB,SG] = rsvd(A,B,G);
-    [Qz,Tz]=qr(Z);
-    [Qw,Tw]=qr(W);
+    [Qz,Tz,~]=qr(Z);
+    [Qw,Tw,~]=qr(W);
     
     sA=diag(SA);
     ee(j)=norm(A);
