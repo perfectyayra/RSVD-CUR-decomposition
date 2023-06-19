@@ -28,7 +28,7 @@ for j=1:10
     E=epsilon*(norm(A_exact)/norm(ee))*ee;
     A=A_exact+E;
     [U,S,V]=svd(A,0); %matlab implementation
-    [Z,W,U1,V1,SA,SB,SC] = rsvd(A,B,G); %our implementation 
+    [Z,W,U1,V1,SA,SB,SG] = rsvd(A,B,G); %our implementation 
 
     for i=1:k
         %% DEIM-CUR 
