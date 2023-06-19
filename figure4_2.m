@@ -75,7 +75,7 @@ hold on;
 semilogy(1:50,mean(neta_p),'--r');
 semilogy(1:50,mean(nTz_hat),'-g'); 
 semilogy(1:50,mean(nTw_hat),'--g'); 
-semilogy(1:50,mean(nerr),'-b*');  
+semilogy(1:50,mean(nerr),'-b');  
 semilogy(1:50,mean(nerr2),'--b');  
 semilogy(1:50,repmat(mean(ee),1,50),'-k');  
 
