@@ -1,5 +1,7 @@
 function icol = deim(V,k)
 
+% Reference: Chaturantabut and Sorensen 2010, Embree and Sorensen, 2016
+
 icol=zeros(1,k);
 [~, icol(1)] = max(abs(V(:,1)));
 for j = 2:k
