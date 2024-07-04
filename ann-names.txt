@@ -1,0 +1,48 @@
+This directory contains Thyroid datasets. "ann-train.data" contains 3772 
+learning examples and "ann-test.data" contains 3428 testing examples. I have 
+obtained this data from Daimler-Benz. This are the informations I have got 
+together with the dataset:
+
+-------------------------------------------------------------------------------
+1. Data setp summary
+
+Number of attributes: 21 (15 attributes are binary,
+			   6 attributes are continuous)
+Number of classes: 3
+Number of learning examples: 3772
+Number of testing examples: 3428
+
+
+2. Description
+
+The problem is to determine whether a patient referred to the clinic is
+hypothyroid. Therefore three classes are built: normal (not hypothyroid),
+hyperfunction and subnormal functioning. Because 92 percent of the patients
+are not hyperthyroid a good classifier must be significant better than 92%.
+
+
+
+
+Attribute Data Type Value Range
+Age Real [0.00,0.93]
+Sex Integer [0,1]
+On_thyroxine Integer [0,1]
+Query_on_thyroxine Integer [0,1]
+antithyroid_medication Integer [0,1]
+Sick Integer [0,1]
+Pregnant Integer [0,1]
+Thyroid_surgery Integer [0,1]
+I131_treatment Integer [0,1]
+Query_hypothyroid Integer [0,1]
+Query_hyperthyroid Integer [0,1]
+Lithium Integer [0,1]
+Goitre Integer [0,1]
+Tumor Integer [0,1]
+Hypopituitary Integer [0,1]
+Psych Integer [0,1]
+TSH Real [0.0, 0.53]
+T3 Real [.0005,.18]
+TT4 Real [0.0020, 0.6]
+T4U Real [0.017, 0.233]
+FTI Real [0.0020, 0.642]
+Class Integer {1,2,3}
